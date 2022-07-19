@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TypeScript Basic</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css">
+
+    <!-- jquery file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="./js/script.js"></script>
+
+  </head>
+  <body>
+
+      <div class="container">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+              <!-- Default panel contents -->
+              <div class="panel-heading" style="background-image: linear-gradient(to bottom,#3A5BA0 0,#3A5BA0 100%);">
+                  <h4 style="color: #fff;">Short Hand Details of TypeScript</h4>
+              </div>
+
+              <!-- Table -->
+              <table class="table">
+                  <tr>
+                      <th>#</th>
+                      <th>Content</th>
+                      <th>Details</th>
+                  </tr>
+                  <tr>
+                      <td colspan="3">
+                        <pre style="background-color: #AEDBCE;">TypeScript setup & config</pre>
+                      </td>
+                  </tr>
+                  <tr>
+                      <th>1</th>
+                      <td>Convert .ts file to .js file</td>
+                      <td>
+                          <pre style="background-color: #DFF6FF;"> => tsc typescript_file_name.ts </pre>
+                      </td>
+                  </tr>
+                  <tr>
+                      <th>2</th>
+                      <td>Create tsconfig.json file</td>
+                      <td>
+                          <pre style="background-color: #DFF6FF;"> => tsc --init </pre>
+                      </td>
+                  </tr>
+                  <tr>
+                      <th>3</th>
+                      <td>Convert .ts file to .js file after setup tsconfig.json file</td>
+                      <td>
+                          <pre style="background-color: #DFF6FF;"> => tsc </pre>
+                      </td>
+                  </tr>
+                  <tr>
+                      <th>4</th>
+                      <td>Convert .ts file to .js file automatically.</td>
+                      <td>
+                          <pre style="background-color: #DFF6FF;"> => tsc -w </pre>
+                      </td>
+                  </tr>
+                  <td colspan="3">
+                    <pre style="background-color: #AEDBCE;">TypeScript Basic</pre>
+                  </td>
+                  <tr>
+                      <th>5</th>
+                      <td>Strict Types Variables</td>
+                      <td>
+                          <pre style="background-color: #DFF6FF;">
+let player = "Mr. Doo";
+console.log(player);
+
+======== output ========
+Mr. Doo
+</pre>
+                          <pre style="background-color: #FFE6E6;">
+let player = "Mr. Doo";
+player = 30;
+console.log(player);
+
+======== output ========
+Type 'number' is not assignable to type 'string'.
+</pre>
+                      </td>
+                  </tr>
+                  <tr>
+                      <th>6</th>
+                      <td>Strict Types Method</td>
+                      <td>
+                          <pre style="background-color: #FFE6E6;">
+function multiply(a, b){
+  return a*b
+}
+console.log(multiply('10',10))
+
+======== output ========
+Parameter 'b' implicitly has an 'any' type.
+</pre>
+                          <pre style="background-color: #DFF6FF;">
+function multiply(a : number, b : number){
+  return a*b
+}
+console.log(multiply('10',10))
+
+======== output ========
+Argument of type 'string' is not assignable to parameter of type 'number'.
+</pre>
+                      </td>
+                  </tr>
+                  <tr>
+                      <th>7</th>
+                      <td>Strict Types Array</td>
+                      <td>
+                          <pre style="background-color: #FFE6E6;">
+let country = ["Bangladesh", "India"];
+country.push(51)
+console.log(country)
+
+======== output ========
+ Argument of type 'number' is not assignable to parameter of type 'string'.
+</pre>
+                          <pre style="background-color: #DFF6FF;">
+let country = ["Bangladesh", "India"];
+country.push("Australia")
+console.log(country)
+
+======== output ========
+["Bangladesh", "India", "Australia"]
+</pre>
+                          <pre style="background-color: #DFF6FF;">
+let country = ["Bangladesh", "India", 1];
+country.push("Australia")
+country.push(30)
+console.log(country)
+
+======== output ========
+['Bangladesh', 'India', 1, 'Australia', 30]
+</pre>
+                      </td>
+                  </tr>
+
+              </table>
+
+            </div>
+        </div>
+      </div>
+  </body>
+</html>
